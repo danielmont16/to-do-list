@@ -1,0 +1,49 @@
+<%- include("partials/header.ejs") %>
+
+<div id="page-container">
+    <div id="content-wrap">
+        
+        <div class="container">
+            
+            <div class="row justify-content-center">
+            
+                <div class="col-md-6">
+                    <h1>Make a to-do list! ✍️</h1>
+                    <div class="table">
+                        <% if (locals.data) { %>
+                            <% data.forEach((element) => { %>
+                                <% let position = data.indexOf(element); %>
+                                <form action="/edit" method="POST" class="mb-3">
+                                    <input type="text" name="element" value="<%= `${element}` %>" disabled class="form-control">
+                                    <input type="hidden" name="position" value="<%= position %>">
+                                    <button type="submit" class="btn btn-primary mt-2" name="choice" value="edit">Edit</button>
+                                   
+                                </form>
+                               
+                            <% }) %>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form action="/submit" method="POST">
+                        <textarea name="comment" id="form" class="form-control" rows="5" placeholder="Type here..."></textarea>  
+                        <button class="btn btn-success mt-3" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    
+    </div>
+
+
+<%- include("partials/footer.ejs") %>
+
+</div>
+

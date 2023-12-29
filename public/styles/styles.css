@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300&display=swap');
+
+*{
+  font-family: Roboto;
+  font-size: 1rem;
+}
+
+.footer-links ul{
+display: flex;
+justify-content: center;
+}
+
+.footer-links ul li{
+    margin: 20px;
+    list-style: none;
+}
+
+.footer-links{
+    background-color: black;
+    color: white;
+}
+
+.copyRight{
+    display: flex;
+    justify-content: center;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh; 
+  }
+  
+#content-wrap {
+    padding-bottom: 2.5rem; 
+    
+  }
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;  
+  
+  }
+
+
+

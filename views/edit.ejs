@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <h1>Now you are in edit mode! 👨🏻‍🔧</h1>
+                    <form action="/update" method="POST">                        
+                        <input type="text" class="form-control" name="uComment"value="<%= commentText%>">
+                        <input type="hidden" name="position" value=<%= position%>>
+                        <button class="btn btn-primary mt-2" name="choice" value="update"type="submit">update</button>
+                        <button class="btn btn-danger mt-2" name="choice" value="delete"type="submit">delete</button>
+                        
+                    </form>
+        </div>
+    </div>
+<%- include("partials/footer.ejs") %>
